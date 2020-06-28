@@ -53,8 +53,8 @@ Add a _UNIX_ group to the system
        - name: "Add wheel group to system"
          include_role:
            name: add-group
-           vars:
-             group_name: wheel
+         vars:
+           group_name: wheel
    ```
 
 ## Role Options
