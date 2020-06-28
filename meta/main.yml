@@ -1,0 +1,30 @@
+galaxy_info:
+  author: digimokan
+  description: "Add a UNIX group to the system"
+  license: "MIT"
+  min_ansible_version: 2.1
+  platforms:
+    - name: Alpine
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Gentoo
+      versions:
+        - all
+    - name: RedHat
+      versions:
+        - all
+    - name: Slackware
+      versions:
+        - all
+    - name: Suse
+      versions:
+        - all
+  galaxy_tags:
+    - group
+

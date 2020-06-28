@@ -1,0 +1,12 @@
+- name: "Check that group_name var is defined for role"
+  fail:
+    msg: "group_name var not defined for this role"
+  when: group_name is undefined
+
+- name: "Add the {{ group_name }} group to the system, if it does not exist"
+  group:
+    name: "{{ group_name }}"
+    state: present
+  become: true
+  become_user: root
+
