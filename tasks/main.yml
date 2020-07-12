@@ -6,6 +6,7 @@
 - name: "Add group '{{ group_name }}' to the system, if it does not exist"
   group:
     name: "{{ group_name }}"
+    system: "{{ is_system_group }}"
     state: present
   become: true
   become_user: root

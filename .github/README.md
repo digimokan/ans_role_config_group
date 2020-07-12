@@ -55,11 +55,18 @@ Add a _UNIX_ group to the system
            name: add-group
          vars:
            group_name: wheel
+           is_system_group: true
    ```
 
 ## Role Options
 
-* `group_name` var: name of group to add (must be defined)
+See the role `defaults` file, for overridable vars:
+
+  * [defaults/main.yml](../defaults/main.yml)
+
+Define these _optional_ vars for the role:
+
+  * `is_system_group`: boolean, make the group a "system" group (UID >= 1000)
 
 ## Contributing
 

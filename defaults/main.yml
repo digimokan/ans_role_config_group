@@ -1,0 +1,3 @@
+# add the new group as a "system" group (i.e. a group with UID >= 1000)
+is_system_group: false
+
