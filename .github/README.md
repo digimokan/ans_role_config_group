@@ -1,8 +1,8 @@
-# ans-role-add-group
+# ans_role_add_group
 
 Add a _UNIX_ group to the system
 
-[![Release](https://img.shields.io/github/release/digimokan/ans-role-add-group.svg?label=release)](https://github.com/digimokan/ans-role-add-group/releases/latest "Latest Release Notes")
+[![Release](https://img.shields.io/github/release/digimokan/ans_role_add_group.svg?label=release)](https://github.com/digimokan/ans_role_add_group/releases/latest "Latest Release Notes")
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?label=license)](LICENSE.md "Project License")
 
 ## Table Of Contents
@@ -30,7 +30,7 @@ Add a _UNIX_ group to the system
 
    ```yaml
    # requirements.yml
-   - src: https://github.com/digimokan/ans-role-add-group
+   - src: https://github.com/digimokan/ans_role_add_group
      version: master
      name: add-group
    ```
@@ -71,7 +71,7 @@ Define these _optional_ vars for the role:
 ## Contributing
 
 * Feel free to report a bug or propose a feature by opening a new
-  [Issue](https://github.com/digimokan/ans-role-add-group/issues).
+  [Issue](https://github.com/digimokan/ans_role_add_group/issues).
 * Follow the project's [Contributing](CONTRIBUTING.md) guidelines.
 * Respect the project's [Code Of Conduct](CODE_OF_CONDUCT.md).
 
