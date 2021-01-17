@@ -31,8 +31,6 @@ Add a _UNIX_ group to the system
    ```yaml
    # requirements.yml
    - src: https://github.com/digimokan/ans_role_add_group
-     version: master
-     name: add-group
    ```
 
 2. From the project root directory, install/download the role:
@@ -52,7 +50,7 @@ Add a _UNIX_ group to the system
      tasks:
        - name: "Add wheel group to system"
          include_role:
-           name: add-group
+           name: ans_role_add_group
          vars:
            group_name: wheel
            is_system_group: true
