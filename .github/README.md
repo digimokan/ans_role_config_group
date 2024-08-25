@@ -1,8 +1,8 @@
-# ans_role_add_group
+# ans_role_config_group
 
 Add a _UNIX_ group to the system
 
-[![Release](https://img.shields.io/github/release/digimokan/ans_role_add_group.svg?label=release)](https://github.com/digimokan/ans_role_add_group/releases/latest "Latest Release Notes")
+[![Release](https://img.shields.io/github/release/digimokan/ans_role_config_group.svg?label=release)](https://github.com/digimokan/ans_role_config_group/releases/latest "Latest Release Notes")
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?label=license)](LICENSE.md "Project License")
 
 ## Table Of Contents
@@ -30,7 +30,7 @@ Add a _UNIX_ group to the system
 
    ```yaml
    # requirements.yml
-   - src: https://github.com/digimokan/ans_role_add_group
+   - src: https://github.com/digimokan/ans_role_config_group
    ```
 
 2. From the project root directory, install/download the role:
@@ -50,26 +50,26 @@ Add a _UNIX_ group to the system
      tasks:
        - name: "Add wheel group to system"
          ansible.builtin.include_role:
-           name: ans_role_add_group
+           name: ans_role_config_group
          vars:
-           group_name: wheel
-           is_system_group: true
+           cfg_group_name: wheel
+           cfg_group_is_system_group: true
    ```
 
 ## Role Options
 
-See the role `defaults` file, for overridable vars:
+Vars that must be defined when including the role in the playbook:
 
-  * [defaults/main.yml](../defaults/main.yml)
+  * [dependencies](../defaults/main/dependencies/main.yml)
 
-Define these _optional_ vars for the role:
+Vars with default values, which can be overridden in the playbook:
 
-  * `is_system_group`: boolean, make the group a "system" group (UID >= 1000)
+  * [overridable](../defaults/main/overridable/main.yml)
 
 ## Contributing
 
 * Feel free to report a bug or propose a feature by opening a new
-  [Issue](https://github.com/digimokan/ans_role_add_group/issues).
+  [Issue](https://github.com/digimokan/ans_role_config_group/issues).
 * Follow the project's [Contributing](CONTRIBUTING.md) guidelines.
 * Respect the project's [Code Of Conduct](CODE_OF_CONDUCT.md).
 

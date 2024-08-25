@@ -1,12 +1,12 @@
-- name: "Check that group_name var is defined for role"
+- name: "Check that cfg_group_name var is defined for role"
   ansible.builtin.fail:
-    msg: "group_name var not defined for this role"
-  when: group_name is undefined
+    msg: "cfg_group_name var not defined for this role"
+  when: cfg_group_name is undefined
 
-- name: "Add group '{{ group_name }}' to the system, if it does not exist"
+- name: "Add group '{{ cfg_group_name }}' to the system, if it does not exist"
   ansible.builtin.group:
-    name: "{{ group_name }}"
-    system: "{{ is_system_group }}"
+    name: "{{ cfg_group_name }}"
+    system: "{{ cfg_group_is_system_group }}"
     state: present
   become: true
   become_user: root
