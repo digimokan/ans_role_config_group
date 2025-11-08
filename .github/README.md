@@ -52,15 +52,11 @@ Add a _UNIX_ group to the system
          ansible.builtin.include_role:
            name: ans_role_config_group
          vars:
-           cfg_group_name: wheel
-           cfg_group_is_system_group: true
+           cfg_groups_to_add:
+             - { group_name: 'mygroup', is_system_group: false }
    ```
 
 ## Role Options
-
-Vars that must be defined when including the role in the playbook:
-
-  * [dependencies](../defaults/main/dependencies/main.yml)
 
 Vars with default values, which can be overridden in the playbook:
 

@@ -1,3 +1,8 @@
-# add the new group as a "system" group (i.e. a group with UID >= 1000)
-cfg_group_is_system_group: false
+# add groups, as required (is_system_group is group with UID >= 1000)
+cfg_groups_to_add: []
+#   - { group_name: 'mygroup', is_system_group: false }
+
+# remove groups, as required
+cfg_groups_to_remove: []
+#   - { group_name: 'othergroup' }
 
