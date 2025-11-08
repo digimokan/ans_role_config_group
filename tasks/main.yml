@@ -5,8 +5,7 @@
     state: present
   become: true
   become_user: root
-  loop:
-    - "{{ cfg_groups_to_add }}"
+  loop: "{{ cfg_groups_to_add }}"
   loop_control:
     loop_var: cfg_group
   when: cfg_groups_to_add | length > 0
@@ -17,8 +16,7 @@
     state: absent
   become: true
   become_user: root
-  loop:
-    - "{{ cfg_groups_to_remove }}"
+  loop: "{{ cfg_groups_to_remove }}"
   loop_control:
     loop_var: cfg_group
   when: cfg_groups_to_remove | length > 0
