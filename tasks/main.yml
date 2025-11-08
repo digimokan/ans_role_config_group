@@ -1,4 +1,4 @@
-- name: "Add groups to the system, if they do not exist: \"{{ cfg_groups_to_add }}\""
+- name: "Add groups to the system, if they do not exist"
   ansible.builtin.group:
     name: "{{ cfg_group.group_name }}"
     system: "{{ cfg_group.is_system_group }}"
@@ -10,7 +10,7 @@
     loop_var: cfg_group
   when: cfg_groups_to_add | length > 0
 
-- name: "Remove groups from the system, as required: \"{{ cfg_groups_to_remove }}\""
+- name: "Remove groups from the system, as required"
   ansible.builtin.group:
     name: "{{ cfg_group.group_name }}"
     state: absent

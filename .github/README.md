@@ -48,7 +48,7 @@ Add a _UNIX_ group to the system
    - hosts: localhost
      connection: local
      tasks:
-       - name: "Add and configure all system groups"
+       - name: "Configure all system groups"
          ansible.builtin.include_role:
            name: ans_role_config_group
          vars:
